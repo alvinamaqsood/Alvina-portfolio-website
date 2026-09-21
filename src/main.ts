@@ -4,7 +4,6 @@ import { SkillsView } from './views/Skills';
 import { ProjectsView } from './views/Projects';
 import { ContactView } from './views/Contact';
 
-// Define GSAP types
 declare const gsap: any;
 declare const ScrollTrigger: any;
 declare const lucide: any;
@@ -12,44 +11,27 @@ declare const lucide: any;
 class App {
     private appContainer: HTMLElement;
     private navbar: HTMLElement | null;
-    private cursor: HTMLElement | null;
 
     constructor() {
         this.appContainer = document.getElementById('app')!;
         this.navbar = document.getElementById('navbar');
-        this.cursor = document.querySelector('.cursor-glow');
-        
-        // Register GSAP Plugins
+
         if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             gsap.registerPlugin(ScrollTrigger);
         }
-        
+
         this.init();
     }
 
     private init() {
-        // 1. Initial Route
         this.handleRoute();
 
-        // 2. Event Listeners
         window.addEventListener('hashchange', () => this.handleRoute());
-        
-        // Premium Custom Cursor
-        if (this.cursor) {
-            document.addEventListener('mousemove', (e: MouseEvent) => {
-                gsap.to(this.cursor, {
-                    x: e.clientX,
-                    y: e.clientY,
-                    duration: 0.8,
-                    ease: "power2.out"
-                });
-            });
-        }
 
-        // Navbar Scroll Effect
+        // Navbar Scroll Shadow
         window.addEventListener('scroll', () => {
             if (this.navbar) {
-                if (window.scrollY > 50) {
+                if (window.scrollY > 40) {
                     this.navbar.classList.add('scrolled');
                 } else {
                     this.navbar.classList.remove('scrolled');
@@ -57,7 +39,7 @@ class App {
             }
         });
 
-        // Mobile Menu
+        // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinksList = document.querySelector('.nav-links');
         if (mobileMenuBtn && navLinksList) {
@@ -68,66 +50,68 @@ class App {
     }
 
     private handleRoute() {
-        const hash = window.location.hash || '#/';
-        const path = hash.slice(1);
-        
-        this.renderView(path);
-        this.updateActiveLink(hash);
-    }
+        const hash = window.location.hash || '#hero';
+        const cleanHash = hash.replace(/^#\/?/, '');
 
-    private async renderView(path: string) {
-        // Page Exit Transition
-        await gsap.to(this.appContainer, {
-            opacity: 0,
-            y: 20,
-            duration: 0.4,
-            ease: "power2.in"
-        });
+        // Standard sections in the landing page
+        const landingSections = ['hero', 'about', 'skills', 'projects', 'timeline', 'testimonials', 'blog', 'contact'];
 
-        switch (path) {
-            case '/':
+        if (landingSections.includes(cleanHash) || cleanHash === '') {
+            // Render full home landing page if not already rendered
+            if (!this.appContainer.querySelector('.home-view')) {
                 this.appContainer.innerHTML = HomeView();
-                break;
-            case '/about':
-                this.appContainer.innerHTML = AboutView();
-                break;
-            case '/skills':
-                this.appContainer.innerHTML = SkillsView();
-                break;
-            case '/projects':
-                this.appContainer.innerHTML = ProjectsView();
-                break;
-            case '/contact':
-                this.appContainer.innerHTML = ContactView();
+                this.initGSAPAnimations();
                 this.initContactForm();
-                break;
-            default:
-                this.appContainer.innerHTML = HomeView();
+            }
+
+            // Scroll to section
+            if (cleanHash && cleanHash !== 'hero') {
+                setTimeout(() => {
+                    const targetEl = document.getElementById(cleanHash);
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 100);
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        } else {
+            // Fallback router views
+            switch (cleanHash) {
+                case 'about':
+                    this.appContainer.innerHTML = AboutView();
+                    break;
+                case 'skills':
+                    this.appContainer.innerHTML = SkillsView();
+                    break;
+                case 'projects':
+                    this.appContainer.innerHTML = ProjectsView();
+                    break;
+                case 'contact':
+                    this.appContainer.innerHTML = ContactView();
+                    this.initContactForm();
+                    break;
+                default:
+                    this.appContainer.innerHTML = HomeView();
+                    this.initContactForm();
+            }
+            this.initGSAPAnimations();
+            window.scrollTo(0, 0);
         }
 
-        // Initialize dynamic elements
-        this.initGSAPAnimations();
-        
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
-        
-        window.scrollTo(0, 0);
 
-        // Page Enter Transition
-        gsap.to(this.appContainer, {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power3.out"
-        });
+        this.updateActiveLink(hash);
     }
 
     private updateActiveLink(hash: string) {
         const links = document.querySelectorAll('.nav-links a');
         links.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === hash) {
+            const href = link.getAttribute('href');
+            if (href === hash || (hash === '' && href === '#hero')) {
                 link.classList.add('active');
             }
         });
@@ -136,46 +120,16 @@ class App {
     private initGSAPAnimations() {
         if (typeof gsap === 'undefined') return;
 
-        // Hero Staggered Animation
-        gsap.fromTo(".reveal", 
-            { opacity: 0, y: 50 },
-            { 
-                opacity: 1, 
-                y: 0, 
-                duration: 1, 
-                stagger: 0.15, 
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: ".reveal",
-                    start: "top 85%",
-                }
+        gsap.fromTo(".reveal",
+            { opacity: 0, y: 35 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.12,
+                ease: "power3.out"
             }
         );
-
-        // Visual Card Floating
-        if (document.querySelector('.visual-card')) {
-            gsap.to(".visual-card", {
-                y: -20,
-                rotation: 5,
-                duration: 3,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut"
-            });
-        }
-        
-        // Bento Items Pop
-        gsap.from(".bento-item", {
-            scale: 0.9,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: "back.out(1.7)",
-            scrollTrigger: {
-                trigger: ".bento-grid",
-                start: "top 80%"
-            }
-        });
     }
 
     private initContactForm() {
@@ -184,30 +138,22 @@ class App {
             contactForm.addEventListener('submit', (e: Event) => {
                 e.preventDefault();
                 const submitBtn = contactForm.querySelector('button') as HTMLButtonElement;
-                
-                gsap.to(submitBtn, {
-                    scale: 0.95,
-                    duration: 0.1,
-                    onComplete: () => {
-                        submitBtn.innerText = 'Sending...';
-                        submitBtn.disabled = true;
-                        
-                        setTimeout(() => {
-                            submitBtn.innerText = 'Message Sent!';
-                            gsap.to(submitBtn, {
-                                background: 'linear-gradient(135deg, #10b981, #059669)',
-                                duration: 0.4
-                            });
-                            contactForm.reset();
-                            
-                            setTimeout(() => {
-                                submitBtn.innerText = 'Send Proposal';
-                                submitBtn.style.background = '';
-                                submitBtn.disabled = false;
-                            }, 3000);
-                        }, 1500);
-                    }
-                });
+                if (!submitBtn) return;
+
+                submitBtn.innerText = 'Sending... ✈';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    submitBtn.innerText = 'Message Sent Successfully! 🎉';
+                    submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                    contactForm.reset();
+
+                    setTimeout(() => {
+                        submitBtn.innerText = 'Send Message ✈';
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 4000);
+                }, 1200);
             });
         }
     }

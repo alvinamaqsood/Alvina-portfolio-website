@@ -1,57 +1,105 @@
 export const ProjectsView = () => `
-    <div class="page-view projects-view">
-        <section class="page-section container" style="padding-top: 15rem;">
-            <div class="projects-header reveal" style="margin-bottom: 8rem;">
-                <h2 class="section-title">Selected <span>Work</span></h2>
-                <p style="color: var(--text-secondary); font-size: 1.5rem; max-width: 600px;">A collection of full-stack systems built with precision, focus, and a passion for engineering excellence.</p>
+    <div class="page-view projects-view container" style="padding-top: 8rem; padding-bottom: 6rem;">
+        <div class="projects-header reveal">
+            <div>
+                <span class="section-tag">FEATURED PROJECTS</span>
+                <h2 class="section-title" style="margin-bottom: 0;">Some of My Recent Work</h2>
             </div>
+            <a href="https://github.com/alvinamaqsood" target="_blank" class="btn btn-primary">
+                View All Projects <i data-lucide="external-link"></i>
+            </a>
+        </div>
 
-            <div class="projects-list">
-                <div class="project-showcase-card reveal" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; margin-bottom: 12rem; align-items: center;">
-                    <div class="showcase-visual" style="border-radius: 40px; overflow: hidden; border: 1px solid var(--border-glass); aspect-ratio: 16/9;">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200" alt="Luxe Cart" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="showcase-content">
-                        <div style="color: var(--accent-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">E-Commerce Architecture</div>
-                        <h3 style="font-size: 3.5rem; font-family: var(--font-header); margin-bottom: 1.5rem; line-height: 1.1;">Luxe Cart Ecosystem</h3>
-                        <p style="color: var(--text-secondary); font-size: 1.2rem; margin-bottom: 2rem;">A massive full-stack commerce solution with 3D product previews, real-time inventory management, and automated payment pipelines.</p>
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
-                            <span class="tag">MERN Stack</span>
-                            <span class="tag">Socket.io</span>
-                            <span class="tag">Stripe API</span>
+        <div class="projects-grid reveal">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-img-wrapper" style="background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);">
+                    <div class="project-preview-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dot" style="background:#ef4444;"></div>
+                            <div class="mockup-dot" style="background:#f59e0b;"></div>
+                            <div class="mockup-dot" style="background:#10b981;"></div>
                         </div>
-                        <a href="#" class="btn btn-outline">View Case Study</a>
+                        <div class="mockup-body">
+                            Smart Techlodge Suite
+                        </div>
                     </div>
                 </div>
-
-                <div class="project-showcase-card reveal" style="display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 4rem; margin-bottom: 12rem; align-items: center;">
-                    <div class="showcase-content">
-                        <div style="color: var(--accent-secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">FinTech Solution</div>
-                        <h3 style="font-size: 3.5rem; font-family: var(--font-header); margin-bottom: 1.5rem; line-height: 1.1;">Nexus Wealth App</h3>
-                        <p style="color: var(--text-secondary); font-size: 1.2rem; margin-bottom: 2rem;">Advanced financial tracking and asset visualization platform for high-net-worth individuals.</p>
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;">
-                            <span class="tag">React</span>
-                            <span class="tag">D3.js</span>
-                            <span class="tag">PostgreSQL</span>
-                        </div>
-                        <a href="#" class="btn btn-outline">View Case Study</a>
+                <div class="project-content">
+                    <h3 class="project-title">Smart Techlodge ERP & Desktop App</h3>
+                    <p class="project-desc">Enterprise web application & Electron desktop suite for employee task tracking, attendance management, and real-time backend API integration.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React.js</span>
+                        <span class="project-tag">Electron.js</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">MongoDB</span>
                     </div>
-                    <div class="showcase-visual" style="border-radius: 40px; overflow: hidden; border: 1px solid var(--border-glass); aspect-ratio: 16/9;">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200" alt="Nexus Wealth" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="project-footer">
+                        <span style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">MERN & Desktop</span>
+                        <a href="https://github.com/alvinamaqsood" target="_blank" class="project-link-btn" aria-label="Project details"><i data-lucide="external-link"></i></a>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-img-wrapper" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
+                    <div class="project-preview-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dot" style="background:#ef4444;"></div>
+                            <div class="mockup-dot" style="background:#f59e0b;"></div>
+                            <div class="mockup-dot" style="background:#10b981;"></div>
+                        </div>
+                        <div class="mockup-body" style="color:#059669;">
+                            EcoTrack Platform
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">EcoTrack Sustainability Platform</h3>
+                    <p class="project-desc">Track your daily carbon footprint and receive personalized recommendations to live a greener, more sustainable lifestyle.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React.js</span>
+                        <span class="project-tag">Express.js</span>
+                        <span class="project-tag">Tailwind CSS</span>
+                        <span class="project-tag">REST API</span>
+                    </div>
+                    <div class="project-footer">
+                        <span style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">Web Application</span>
+                        <a href="https://github.com/alvinamaqsood" target="_blank" class="project-link-btn" aria-label="Project details"><i data-lucide="external-link"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-img-wrapper" style="background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);">
+                    <div class="project-preview-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dot" style="background:#ef4444;"></div>
+                            <div class="mockup-dot" style="background:#f59e0b;"></div>
+                            <div class="mockup-dot" style="background:#10b981;"></div>
+                        </div>
+                        <div class="mockup-body" style="color:#d946ef;">
+                            DevConnect Portal
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">DevConnect Community Portal</h3>
+                    <p class="project-desc">Fullstack Next.js developer community portal featuring project showcases, real-time collaboration tools, and tech job board.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">Node.js</span>
+                    </div>
+                    <div class="project-footer">
+                        <span style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">Fullstack Next.js</span>
+                        <a href="https://github.com/alvinamaqsood" target="_blank" class="project-link-btn" aria-label="Project details"><i data-lucide="external-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <style>
-        .tag {
-            background: rgba(255,255,255,0.05);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            color: var(--text-primary);
-            border: 1px solid var(--border-glass);
-        }
-    </style>
 `;

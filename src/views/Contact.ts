@@ -1,36 +1,52 @@
 export const ContactView = () => `
-    <div class="page-view contact-view">
-        <section class="page-section container" style="padding-top: 15rem;">
-            <div class="hero-grid">
-                <div class="contact-info reveal">
-                    <h2 class="section-title">Let's build <br><span>Together</span></h2>
-                    <p class="hero-subtitle">I'm currently open for freelance opportunities and full-time collaborations. Let's discuss how the MERN stack can power your next big idea.</p>
-                    <div style="margin-top: 5rem;">
-                        <div style="margin-bottom: 3rem;">
-                            <p style="color: var(--text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; font-weight: 700; letter-spacing: 1px;">Email Me</p>
-                            <a href="mailto:hello@alvina.dev" style="font-size: 1.8rem; font-weight: 700; color: var(--text-primary); text-decoration: none; font-family: var(--font-header);">hello@alvina.dev</a>
+    <div class="page-view contact-view container" style="padding-top: 8rem; padding-bottom: 6rem;">
+        <div class="contact-wrapper reveal">
+            <div class="contact-grid">
+                <div>
+                    <span class="section-tag" style="background: rgba(255,255,255,0.2); color:#ffffff;">LET'S CONNECT</span>
+                    <h2 class="contact-info-title">Have a project in mind?</h2>
+                    <p class="contact-info-subtitle">Let's build something amazing together!</p>
+
+                    <div class="contact-detail-list">
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i data-lucide="mail"></i></div>
+                            <div>alvinamaqsood.dev@gmail.com</div>
                         </div>
-                        <div>
-                            <p style="color: var(--text-secondary); margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem; font-weight: 700; letter-spacing: 1px;">Location</p>
-                            <p style="font-size: 1.8rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-header);">London, UK / Remote</p>
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i data-lucide="phone"></i></div>
+                            <div>+92 300 0000000</div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="contact-detail-icon"><i data-lucide="map-pin"></i></div>
+                            <div>Rahimyar Khan, Punjab, Pakistan</div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form reveal">
-                    <form class="contact-form-premium card-premium">
-                        <div class="form-group" style="margin-bottom: 1.5rem;">
-                            <input type="text" placeholder="Full Name" required>
+
+                <div class="contact-form-card">
+                    <form class="contact-form-premium">
+                        <div class="form-group">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" placeholder="Enter your full name" required>
                         </div>
-                        <div class="form-group" style="margin-bottom: 1.5rem;">
-                            <input type="email" placeholder="Email Address" required>
+                        <div class="form-group">
+                            <label class="form-label">Your Email</label>
+                            <input type="email" placeholder="name@example.com" required>
                         </div>
-                        <div class="form-group" style="margin-bottom: 2rem;">
-                            <textarea placeholder="Tell me about your project" rows="6" required></textarea>
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input type="text" placeholder="Project Discussion / Hiring" required>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Proposal</button>
+                        <div class="form-group">
+                            <label class="form-label">Your Message</label>
+                            <textarea rows="4" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Send Message <i data-lucide="send"></i>
+                        </button>
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 `;

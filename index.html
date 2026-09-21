@@ -1,60 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvina | Masterpiece Portfolio</title>
-    <meta name="description" content="Professional Portfolio of Alvina - Creative Developer & Designer">
-    
-    <!-- Fonts -->
+    <title>Alvina Maqsood | Frontend & MERN Stack Developer | React, Next.js, Node.js</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Alvina Maqsood, a passionate Frontend & MERN Stack Developer specializing in React.js, Next.js, Tailwind CSS, Node.js, Express.js, MongoDB, and Electron.js. Building scalable fullstack web and desktop applications.">
+    <meta name="keywords" content="Alvina Maqsood, MERN Stack Developer, Frontend Developer, React Developer, Next.js Developer, Node.js, Express.js, MongoDB, Electron.js, Web Developer Pakistan, Software Engineer Rahim Yar Khan">
+    <meta name="author" content="Alvina Maqsood">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://alvinamaqsood.dev/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alvinamaqsood.dev/">
+    <meta property="og:title" content="Alvina Maqsood | Frontend & MERN Stack Developer">
+    <meta property="og:description" content="Explore projects, skills, and experience of Alvina Maqsood — Frontend & MERN Stack Developer building responsive web & desktop applications.">
+    <meta property="og:image" content="/images/hero_3d_avatar.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alvina Maqsood | Frontend & MERN Stack Developer">
+    <meta name="twitter:description" content="Explore projects, skills, and experience of Alvina Maqsood — Frontend & MERN Stack Developer building responsive web & desktop applications.">
+    <meta name="twitter:image" content="/images/hero_3d_avatar.png">
+
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Alvina Maqsood",
+      "jobTitle": "Frontend & MERN Stack Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Smart Techlodge"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "The Islamia University of Bahawalpur"
+      },
+      "url": "https://www.linkedin.com/in/alvina-maqsood-35618b370",
+      "sameAs": [
+        "https://www.linkedin.com/in/alvina-maqsood-35618b370",
+        "https://github.com/alvinamaqsood"
+      ],
+      "knowsAbout": [
+        "React.js",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Electron.js",
+        "RESTful APIs"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- GSAP for Professional Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-    <div class="cursor-glow"></div>
 
+<body>
+    <!-- Navbar -->
     <nav id="navbar">
         <div class="nav-container container">
-            <a href="#/" class="logo">ALVINA<span>.</span></a>
+            <a href="#hero" class="logo">Alvina<span>.</span></a>
             <ul class="nav-links">
-                <li><a href="#/" class="active">Home</a></li>
-                <li><a href="#/about">About</a></li>
-                <li><a href="#/skills">Skills</a></li>
-                <li><a href="#/projects">Projects</a></li>
-                <li><a href="#/contact">Contact</a></li>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#timeline">Education</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
                 <i data-lucide="menu"></i>
             </button>
         </div>
     </nav>
 
-    <!-- Content will be injected here -->
+    <!-- Main Container App -->
     <div id="app"></div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2026 Alvina. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#"><i data-lucide="github"></i></a>
-                    <a href="#"><i data-lucide="twitter"></i></a>
-                    <a href="#"><i data-lucide="linkedin"></i></a>
+                <div>
+                    <a href="#hero" class="logo" style="color:#ffffff;">Alvina<span style="color:var(--accent-purple);">.</span></a>
+                    <p style="color:#94a3b8; font-size:0.9rem; margin-top:0.4rem;">Frontend & MERN Stack Developer | Turning ideas into real-world applications.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/alvinamaqsood" target="_blank" class="social-btn" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/alvina-maqsood-35618b370" target="_blank" class="social-btn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="mailto:alvinamaqsood.dev@gmail.com" class="social-btn" aria-label="Email"><i data-lucide="mail"></i></a>
                 </div>
             </div>
+            <p class="footer-copy">&copy; 2026 Alvina Maqsood. All rights reserved. Designed & Built with ❤️</p>
         </div>
     </footer>
 
     <script type="module" src="/src/main.ts"></script>
 </body>
+
 </html>
