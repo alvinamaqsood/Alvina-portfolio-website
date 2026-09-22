@@ -42,7 +42,7 @@ export const AboutView = () => `
                 <div class="stats-grid reveal">
                     <div class="stat-card">
                         <div>
-                            <div class="stat-number">15+</div>
+                            <div class="stat-number">3+</div>
                             <div class="stat-label">Projects Completed</div>
                         </div>
                         <div class="stat-icon purple">📁</div>
