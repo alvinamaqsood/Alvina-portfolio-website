@@ -47,6 +47,27 @@ class App {
                 navLinksList.classList.toggle('active');
             });
         }
+
+        // Project Image Tab Switcher
+        document.addEventListener('click', (e: Event) => {
+            const target = e.target as HTMLElement;
+            if (target && (target.classList.contains('sf-tab-btn') || target.classList.contains('dd-tab-btn') || target.classList.contains('pos-tab-btn') || target.classList.contains('project-tab-btn'))) {
+                const card = target.closest('.project-card');
+                if (card) {
+                    const img = (card.querySelector('.project-preview-img') || card.querySelector('#sf-preview-img') || card.querySelector('#dd-preview-img') || card.querySelector('#pos-preview-img')) as HTMLImageElement;
+                    const newSrc = target.getAttribute('data-img');
+                    if (img && newSrc) {
+                        img.style.opacity = '0.3';
+                        setTimeout(() => {
+                            img.src = newSrc;
+                            img.style.opacity = '1';
+                        }, 150);
+                    }
+                    card.querySelectorAll('.sf-tab-btn, .dd-tab-btn, .pos-tab-btn, .project-tab-btn').forEach(btn => btn.classList.remove('active'));
+                    target.classList.add('active');
+                }
+            }
+        });
     }
 
     private handleRoute() {
@@ -54,7 +75,7 @@ class App {
         const cleanHash = hash.replace(/^#\/?/, '');
 
         // Standard sections in the landing page
-        const landingSections = ['hero', 'about', 'skills', 'projects', 'timeline', 'testimonials', 'blog', 'contact'];
+        const landingSections = ['hero', 'about', 'skills', 'projects', 'timeline', 'testimonials', 'contact'];
 
         if (landingSections.includes(cleanHash) || cleanHash === '') {
             // Render full home landing page if not already rendered
@@ -140,11 +161,21 @@ class App {
                 const submitBtn = contactForm.querySelector('button') as HTMLButtonElement;
                 if (!submitBtn) return;
 
-                submitBtn.innerText = 'Sending... ✈';
+                const inputs = contactForm.querySelectorAll('input');
+                const textInputs = contactForm.querySelectorAll('input[type="text"]');
+                const nameInput = textInputs.length > 0 ? (textInputs[0] as HTMLInputElement).value : '';
+                const emailInput = (contactForm.querySelector('input[type="email"]') as HTMLInputElement)?.value || '';
+                const subjectInput = textInputs.length > 1 ? (textInputs[1] as HTMLInputElement).value : 'Project Discussion';
+                const messageInput = (contactForm.querySelector('textarea') as HTMLTextAreaElement)?.value || '';
+
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=alvinamaqsood95@gmail.com&su=${encodeURIComponent(subjectInput)}&body=${encodeURIComponent(`From: ${nameInput} (${emailInput})\n\n${messageInput}`)}`;
+
+                submitBtn.innerText = 'Opening Gmail... ✈';
                 submitBtn.disabled = true;
 
                 setTimeout(() => {
-                    submitBtn.innerText = 'Message Sent Successfully! 🎉';
+                    window.open(gmailUrl, '_blank');
+                    submitBtn.innerText = 'Opened in Gmail! 🎉';
                     submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
                     contactForm.reset();
 
@@ -153,7 +184,7 @@ class App {
                         submitBtn.style.background = '';
                         submitBtn.disabled = false;
                     }, 4000);
-                }, 1200);
+                }, 800);
             });
         }
     }

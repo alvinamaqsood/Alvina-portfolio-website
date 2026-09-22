@@ -10,7 +10,7 @@ export const ContactView = () => `
                     <div class="contact-detail-list">
                         <div class="contact-detail-item">
                             <div class="contact-detail-icon"><i data-lucide="mail"></i></div>
-                            <div>alvinamaqsood.dev@gmail.com</div>
+                            <div><a href="https://mail.google.com/mail/?view=cm&fs=1&to=alvinamaqsood95@gmail.com" target="_blank" style="color:#ffffff; text-decoration:none; font-weight:600;">alvinamaqsood95@gmail.com</a></div>
                         </div>
                         <div class="contact-detail-item">
                             <div class="contact-detail-icon"><i data-lucide="phone"></i></div>

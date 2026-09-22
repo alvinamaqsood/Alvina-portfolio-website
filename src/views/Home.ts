@@ -17,7 +17,7 @@ export const HomeView = () => `
                         <a href="#projects" class="btn btn-primary">
                             Explore My Work <i data-lucide="arrow-right"></i>
                         </a>
-                        <a href="#contact" class="btn btn-dark">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alvinamaqsood95@gmail.com" target="_blank" class="btn btn-dark">
                             <i data-lucide="mail"></i> Contact Me
                         </a>
                     </div>
@@ -25,9 +25,15 @@ export const HomeView = () => `
                     <div class="social-connect reveal">
                         <span class="social-label">Connect with me:</span>
                         <div class="social-icons">
-                            <a href="https://github.com/alvinamaqsood" target="_blank" class="social-btn" aria-label="GitHub"><i data-lucide="github"></i></a>
-                            <a href="https://www.linkedin.com/in/alvina-maqsood-35618b370" target="_blank" class="social-btn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                            <a href="mailto:alvinamaqsood.dev@gmail.com" class="social-btn" aria-label="Email"><i data-lucide="mail"></i></a>
+                            <a href="https://github.com/alvinamaqsood" target="_blank" class="social-btn" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/alvina-maqsood-35618b370" target="_blank" class="social-btn" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alvinamaqsood95@gmail.com" target="_blank" class="social-btn" aria-label="Email">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +74,7 @@ export const HomeView = () => `
                             </div>
                             <div class="info-item">
                                 <div class="info-icon"><i data-lucide="mail"></i></div>
-                                <div><strong>Email:</strong> alvinamaqsood.dev@gmail.com</div>
+                                <div><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alvinamaqsood95@gmail.com" target="_blank" style="color:var(--accent-purple); text-decoration:none; font-weight:600;">alvinamaqsood95@gmail.com</a></div>
                             </div>
                             <div class="info-item">
                                 <div class="info-icon"><i data-lucide="globe"></i></div>
@@ -84,21 +90,21 @@ export const HomeView = () => `
                         <div class="stats-grid reveal">
                             <div class="stat-card">
                                 <div>
-                                    <div class="stat-number">15+</div>
+                                    <div class="stat-number">3+</div>
                                     <div class="stat-label">Projects Completed</div>
                                 </div>
                                 <div class="stat-icon purple">📁</div>
                             </div>
                             <div class="stat-card">
                                 <div>
-                                    <div class="stat-number">3+</div>
-                                    <div class="stat-label">Years of Learning</div>
+                                    <div class="stat-number">1+</div>
+                                    <div class="stat-label">Years of Experience</div>
                                 </div>
                                 <div class="stat-icon blue">🎓</div>
                             </div>
                             <div class="stat-card">
                                 <div>
-                                    <div class="stat-number">5+</div>
+                                    <div class="stat-number">3+</div>
                                     <div class="stat-label">Certifications</div>
                                 </div>
                                 <div class="stat-icon gold">🎖️</div>
@@ -185,98 +191,86 @@ export const HomeView = () => `
                         <span class="section-tag">FEATURED PROJECTS</span>
                         <h2 class="section-title" style="margin-bottom: 0;">Some of My Recent Work</h2>
                     </div>
-                    <a href="https://github.com/alvinamaqsood" target="_blank" class="btn btn-primary">
-                        View All Projects <i data-lucide="external-link"></i>
+                    <a href="#projects" class="btn btn-primary">
+                        View All Projects <i data-lucide="arrow-right"></i>
                     </a>
                 </div>
 
                 <div class="projects-grid reveal">
-                    <!-- Project 1 -->
+                    <!-- Project 1: SmartForge Task Management App -->
                     <div class="project-card">
-                        <div class="project-img-wrapper" style="background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);">
-                            <div class="project-preview-mockup">
-                                <div class="mockup-header">
-                                    <div class="mockup-dot" style="background:#ef4444;"></div>
-                                    <div class="mockup-dot" style="background:#f59e0b;"></div>
-                                    <div class="mockup-dot" style="background:#10b981;"></div>
-                                </div>
-                                <div class="mockup-body">
-                                    Smart Techlodge Suite
-                                </div>
+                        <div class="project-img-wrapper" style="height: 240px; position: relative; overflow: hidden; background: #ffffff; border-bottom: 1px solid var(--border-light);">
+                            <div class="smartforge-tabs" style="position: absolute; top: 12px; right: 12px; z-index: 10; display: flex; gap: 4px; background: rgba(241, 245, 249, 0.9); backdrop-filter: blur(6px); padding: 4px 6px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                                <button type="button" class="sf-tab-btn active" data-img="/images/smartforge-dashboard.png">Dashboard</button>
+                                <button type="button" class="sf-tab-btn" data-img="/images/smartforge-tasks.png">Tasks</button>
+                                <button type="button" class="sf-tab-btn" data-img="/images/smartforge-performance.png">Insights</button>
                             </div>
+                            <img id="sf-preview-img" class="project-preview-img" src="/images/smartforge-dashboard.png" alt="SmartForge Dashboard" style="width: 100%; height: 100%; object-fit: contain; object-position: center; background: #ffffff; transition: opacity 0.2s ease; cursor: pointer; display: block;" onclick="window.open(this.src, '_blank')">
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Smart Techlodge ERP & Desktop App</h3>
-                            <p class="project-desc">Enterprise web application & Electron desktop suite for employee task tracking, attendance management, and real-time backend API integration.</p>
+                            <h3 class="project-title">SmartForge Task Management App</h3>
+                            <p class="project-desc">Security-focused task management platform featuring real-time task tracking, workflow automation, and collaborative team productivity tools.</p>
                             <div class="project-tags">
                                 <span class="project-tag">React.js</span>
-                                <span class="project-tag">Electron.js</span>
                                 <span class="project-tag">Node.js</span>
-                                <span class="project-tag">MongoDB</span>
-                            </div>
-                            <div class="project-footer">
-                                <span style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">MERN & Desktop</span>
-                                <a href="https://github.com/alvinamaqsood" target="_blank" class="project-link-btn" aria-label="Project details"><i data-lucide="external-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
-                            <div class="project-preview-mockup">
-                                <div class="mockup-header">
-                                    <div class="mockup-dot" style="background:#ef4444;"></div>
-                                    <div class="mockup-dot" style="background:#f59e0b;"></div>
-                                    <div class="mockup-dot" style="background:#10b981;"></div>
-                                </div>
-                                <div class="mockup-body" style="color:#059669;">
-                                    EcoTrack Platform
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">EcoTrack Sustainability Platform</h3>
-                            <p class="project-desc">Track your daily carbon footprint and receive personalized recommendations to live a greener, more sustainable lifestyle.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">React.js</span>
-                                <span class="project-tag">Express.js</span>
-                                <span class="project-tag">Tailwind CSS</span>
-                                <span class="project-tag">REST API</span>
-                            </div>
-                            <div class="project-footer">
-                                <span style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">Web Application</span>
-                                <a href="https://github.com/alvinamaqsood" target="_blank" class="project-link-btn" aria-label="Project details"><i data-lucide="external-link"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-img-wrapper" style="background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);">
-                            <div class="project-preview-mockup">
-                                <div class="mockup-header">
-                                    <div class="mockup-dot" style="background:#ef4444;"></div>
-                                    <div class="mockup-dot" style="background:#f59e0b;"></div>
-                                    <div class="mockup-dot" style="background:#10b981;"></div>
-                                </div>
-                                <div class="mockup-body" style="color:#d946ef;">
-                                    DevConnect Portal
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">DevConnect Community Portal</h3>
-                            <p class="project-desc">Fullstack Next.js developer community portal featuring project showcases, real-time collaboration tools, and tech job board.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Next.js</span>
                                 <span class="project-tag">TypeScript</span>
-                                <span class="project-tag">MongoDB</span>
-                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">Task Management</span>
                             </div>
                             <div class="project-footer">
-                                <span style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">Fullstack Next.js</span>
-                                <a href="https://github.com/alvinamaqsood" target="_blank" class="project-link-btn" aria-label="Project details"><i data-lucide="external-link"></i></a>
+                                <span style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">Live Web App</span>
+                                <a href="https://smartforge.securitypro.group/" target="_blank" class="project-link-btn" aria-label="SmartForge Live Site"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Diamond Discs -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper" style="height: 240px; position: relative; overflow: hidden; background: #ffffff; border-bottom: 1px solid var(--border-light);">
+                            <div class="diamonddiscs-tabs" style="position: absolute; top: 12px; right: 12px; z-index: 10; display: flex; gap: 4px; background: rgba(241, 245, 249, 0.9); backdrop-filter: blur(6px); padding: 4px 6px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                                <button type="button" class="dd-tab-btn active" data-img="/images/diamond-discs-home.png">Hero</button>
+                                <button type="button" class="dd-tab-btn" data-img="/images/diamond-discs-applications.png">Applications</button>
+                                <button type="button" class="dd-tab-btn" data-img="/images/diamond-discs-specs.png">Specs</button>
+                            </div>
+                            <img id="dd-preview-img" class="project-preview-img" src="/images/diamond-discs-home.png" alt="Diamond Discs Platform" style="width: 100%; height: 100%; object-fit: contain; object-position: center; background: #ffffff; transition: opacity 0.2s ease; cursor: pointer; display: block;" onclick="window.open(this.src, '_blank')">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Diamond Discs Platform</h3>
+                            <p class="project-desc">Modern web application built for Diamond Discs featuring dynamic product presentation, responsive user interface, and seamless browsing experience.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">React.js</span>
+                                <span class="project-tag">Next.js</span>
+                                <span class="project-tag">Tailwind CSS</span>
+                                <span class="project-tag">Vercel</span>
+                            </div>
+                            <div class="project-footer">
+                                <span style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">Live Web App</span>
+                                <a href="https://diamond-discs.vercel.app/" target="_blank" class="project-link-btn" aria-label="Diamond Discs Live Site"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Smart POS Invoicing with ERPNext Sync -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper" style="height: 240px; position: relative; overflow: hidden; background: #ffffff; border-bottom: 1px solid var(--border-light);">
+                            <div class="smartpos-tabs" style="position: absolute; top: 12px; right: 12px; z-index: 10; display: flex; gap: 4px; background: rgba(241, 245, 249, 0.9); backdrop-filter: blur(6px); padding: 4px 6px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                                <button type="button" class="pos-tab-btn active" data-img="/images/smartpos-dashboard.png">Dashboard</button>
+                                <button type="button" class="pos-tab-btn" data-img="/images/smartpos-terminal.png">Terminal</button>
+                                <button type="button" class="pos-tab-btn" data-img="/images/smartpos-settings.png">Settings</button>
+                            </div>
+                            <img id="pos-preview-img" class="project-preview-img" src="/images/smartpos-dashboard.png" alt="Smart POS Invoicing Dashboard" style="width: 100%; height: 100%; object-fit: contain; object-position: center; background: #ffffff; transition: opacity 0.2s ease; cursor: pointer; display: block;" onclick="window.open(this.src, '_blank')">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Smart POS Invoicing with ERPNext Sync</h3>
+                            <p class="project-desc">Desktop POS invoicing application engineered with offline transactions and real-time backend synchronization with ERPNext ERP system.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Electron.js</span>
+                                <span class="project-tag">React.js</span>
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">ERPNext Sync</span>
+                            </div>
+                            <div class="project-footer">
+                                <span style="font-size:0.85rem; font-weight:600; color:var(--text-muted);">Electron Desktop App</span>
+                                <span class="project-link-btn" title="Desktop App (Not Live Web Link)" style="cursor: default; opacity: 0.8;"><i data-lucide="monitor"></i></span>
                             </div>
                         </div>
                     </div>
@@ -284,39 +278,10 @@ export const HomeView = () => `
             </div>
         </section>
 
-        <!-- Achievements & Education Timeline Section -->
+        <!-- Education Timeline Section -->
         <section id="timeline" class="timeline-section" style="background: rgba(255, 255, 255, 0.5);">
             <div class="container">
                 <div class="timeline-grid">
-                    <!-- Achievements Column -->
-                    <div class="reveal">
-                        <span class="section-tag">ACHIEVEMENTS</span>
-                        <h3 class="timeline-column-title">
-                            🏆 Honors & Milestones
-                        </h3>
-
-                        <div class="timeline-item">
-                            <span class="timeline-date">2024 - PRESENT</span>
-                            <h4 class="timeline-role">Software Engineer / Developer</h4>
-                            <div class="timeline-org">Smart Techlodge (Rahim Yar Khan)</div>
-                            <p class="timeline-desc">Engineered key frontend components and REST API integrations for client projects using React, Node.js, and Electron.js.</p>
-                        </div>
-
-                        <div class="timeline-item">
-                            <span class="timeline-date">2023 - 2024</span>
-                            <h4 class="timeline-role">Full Stack & MERN Certification</h4>
-                            <div class="timeline-org">Web & Mobile App Development</div>
-                            <p class="timeline-desc">Mastered MERN stack development including React.js, Express.js, MongoDB, Node.js, and modern state management.</p>
-                        </div>
-
-                        <div class="timeline-item">
-                            <span class="timeline-date">2023</span>
-                            <h4 class="timeline-role">LeetCode & Problem Solving Specialist</h4>
-                            <div class="timeline-org">Data Structures & Algorithms</div>
-                            <p class="timeline-desc">Solved 300+ programming challenges optimizing execution time and algorithmic space complexity.</p>
-                        </div>
-                    </div>
-
                     <!-- Education Column -->
                     <div class="reveal">
                         <span class="section-tag">EDUCATION</span>
@@ -378,59 +343,6 @@ export const HomeView = () => `
             </div>
         </section>
 
-        <!-- Blog Section -->
-        <section id="blog" class="blog-section" style="background: rgba(255, 255, 255, 0.5);">
-            <div class="container">
-                <div class="projects-header reveal">
-                    <div>
-                        <span class="section-tag">FROM MY BLOG</span>
-                        <h2 class="section-title" style="margin-bottom: 0;">Latest Articles</h2>
-                    </div>
-                    <a href="#contact" class="btn btn-outline">
-                        Read All Articles <i data-lucide="arrow-right"></i>
-                    </a>
-                </div>
-
-                <div class="blog-grid reveal">
-                    <div class="blog-card">
-                        <div class="blog-banner" style="background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);">
-                            ⚡
-                        </div>
-                        <div class="blog-content">
-                            <span class="blog-date">May 10, 2026</span>
-                            <h3 class="blog-title">My Journey into Full Stack & MERN Development</h3>
-                            <p class="blog-excerpt">Sharing key insights, challenges, and lessons learned while transitioning from frontend basics to building enterprise MERN applications.</p>
-                            <a href="#contact" class="blog-link">Read Article <i data-lucide="arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="blog-card">
-                        <div class="blog-banner" style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);">
-                            🚀
-                        </div>
-                        <div class="blog-content">
-                            <span class="blog-date">Apr 25, 2026</span>
-                            <h3 class="blog-title">Top 5 JavaScript Concepts Every React Developer Must Master</h3>
-                            <p class="blog-excerpt">Closures, Promises, Async/Await, Array destructuring, and Event Loop explained cleanly with practical code snippets.</p>
-                            <a href="#contact" class="blog-link">Read Article <i data-lucide="arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="blog-card">
-                        <div class="blog-banner" style="background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);">
-                            💻
-                        </div>
-                        <div class="blog-content">
-                            <span class="blog-date">Apr 15, 2026</span>
-                            <h3 class="blog-title">Building Cross-Platform Desktop Apps with Electron.js & React</h3>
-                            <p class="blog-excerpt">How to bundle your web skills into native desktop applications for Windows, macOS, and Linux with ease.</p>
-                            <a href="#contact" class="blog-link">Read Article <i data-lucide="arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="container">
@@ -444,7 +356,7 @@ export const HomeView = () => `
                             <div class="contact-detail-list">
                                 <div class="contact-detail-item">
                                     <div class="contact-detail-icon"><i data-lucide="mail"></i></div>
-                                    <div>alvinamaqsood.dev@gmail.com</div>
+                                    <div><a href="https://mail.google.com/mail/?view=cm&fs=1&to=alvinamaqsood95@gmail.com" target="_blank" style="color:#ffffff; text-decoration:none; font-weight:600;">alvinamaqsood95@gmail.com</a></div>
                                 </div>
                                 <div class="contact-detail-item">
                                     <div class="contact-detail-icon"><i data-lucide="phone"></i></div>

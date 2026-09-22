@@ -27,7 +27,7 @@ export const AboutView = () => `
                     </div>
                     <div class="info-item">
                         <div class="info-icon"><i data-lucide="mail"></i></div>
-                        <div><strong>Email:</strong> alvinamaqsood.dev@gmail.com</div>
+                        <div><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alvinamaqsood95@gmail.com" target="_blank" style="color:var(--accent-purple); text-decoration:none; font-weight:600;">alvinamaqsood95@gmail.com</a></div>
                     </div>
                     <div class="info-item">
                         <div class="info-icon"><i data-lucide="globe"></i></div>
@@ -49,14 +49,14 @@ export const AboutView = () => `
                     </div>
                     <div class="stat-card">
                         <div>
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Years of Learning</div>
+                            <div class="stat-number">1+</div>
+                            <div class="stat-label">Years of Experience</div>
                         </div>
                         <div class="stat-icon blue">🎓</div>
                     </div>
                     <div class="stat-card">
                         <div>
-                            <div class="stat-number">5+</div>
+                            <div class="stat-number">3+</div>
                             <div class="stat-label">Certifications</div>
                         </div>
                         <div class="stat-icon gold">🎖️</div>
